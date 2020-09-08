@@ -2,3 +2,4 @@ com\zty\domian\User.class
 com\zty\dao\IUserDao.class
 com\zty\service\IUserService.class
 com\zty\service\Imp\IUserServiceImp.class
+com\zty\controller\UserController.class

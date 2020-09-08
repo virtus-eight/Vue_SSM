@@ -4,6 +4,7 @@ import com.zty.domian.User;
 import com.zty.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -32,7 +33,8 @@ public class UserController {
     /**
      * 更新**/
     @RequestMapping("/updateUser")
-    public void updateUser(User user){
+    public void updateUser(@RequestBody User user){//@RequestBody将传如的json对象和user domian绑定
+        System.out.println(user);
         iUserService.updateUser(user);
     }
 }
